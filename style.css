@@ -1,0 +1,78 @@
+.img-nav img:hover{
+    content: url("img/WhatsApp_Image_2025-05-02_at_22.25.53_61c9663f-removebg-preview.png");
+    width: 100px;
+}
+
+.arc-img-1{
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.arc-img-1:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(255, 165, 0, 0.4);
+    z-index: 10;
+}
+
+.arc-img-2{
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.arc-img-2:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 20px rgb(50, 7, 142);
+    z-index: 10;
+}
+
+.arc-img-3{
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.arc-img-3:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 20px blue;
+    z-index: 10;
+}
+
+.egghead{
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.egghead:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 20px blue;
+    z-index: 10;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+.kiri {
+  padding: 20px;
+}
+
+.kanan {
+  padding: 20px;
+}
