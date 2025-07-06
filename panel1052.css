@@ -1,0 +1,41 @@
+.panel1{
+    background-color: black;
+}
+
+.main1{
+    background-color: #2d2d2d;
+}
+
+.blank{
+    padding-bottom: 100px;
+}
+
+.main1 h1{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.back{
+    padding-top: 10px;
+}
+
+.back p{
+    color: white;
+}
+
+.back button{
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.img{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.back1{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

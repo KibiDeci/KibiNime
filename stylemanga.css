@@ -1,0 +1,168 @@
+.main1{
+    background-color: rgb(0, 0, 0);
+    padding: 50px;
+}
+
+.container1{
+    background-color: #2d2d2d;
+    padding: 30px;
+}
+
+.col{
+    max-width: 70%;
+    height: auto;
+    display: block;
+}
+
+.title{
+    color: white;
+    text-align: left;
+}
+
+.manga-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 12px;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+}
+
+.manga-box img {
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.manga-info h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.manga-info p {
+    margin: 4px 0;
+    color: white;
+    text-align: justify;
+}
+
+.mb-2{
+    text-align: left;
+}
+
+.span-author-info{
+    color: #605f5f;
+}
+
+.author-name-info{
+    color: rgb(140, 140, 140);
+    font-size: 10px;
+}
+
+.rating{
+    margin-left: -500px;
+}
+
+.star-rating{
+    color: yellow;
+    font-size: 40px;
+    padding-left: 500px;
+}
+
+.num-rating{
+    color: white;
+    font-size: 50px;
+}
+
+.input-read p{
+    text-decoration: none;
+    color: black;
+    background-color: blue;
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 3px;
+}
+
+.input-read a{
+    padding-right: 630px;
+}
+
+.garis-kustom {
+    border: none;
+    height: 2px;
+    background-color: rgb(94, 94, 94);
+    margin: 20px auto;
+}
+
+.row-chapter .row {
+    margin-bottom: 80px;
+}
+  
+.hidden{
+    display: none;
+}
+
+
+.expand-button {
+    background-color: #ff7043;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.chapter-1 {
+    background-color: #007bff;;
+    color: black;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 26px;
+    font-weight: bold;
+    text-align: left;
+    transition: 0.3s;
+    text-decoration: none;
+    padding-right: 75px;
+    padding-left: 75px;
+}
+
+.container-chapter-list h1{
+    color: white;
+    padding-bottom: 40px;
+}
+
+.chapter-1:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+  
+.button-more{
+    margin-top: -60px;
+    padding-left: 35px;
+}
+
+.fun-fact-container{
+    background-color: #007bff;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+.fun-fact-container h3{
+    color: white;
+}
+
+.fun-fact-row{
+    padding-top: 20px;
+    color: white;
+    text-align: justify;
+    padding-left: 5px;
+}
+
+.li-fun-fact2{
+    padding-top: 30px;
+}

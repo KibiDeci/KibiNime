@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alabasta Arc</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+      :root {
+        --desert-sand: #D2B48C;
+        --desert-gold: #DAA520;
+        --royal-blue: #1e3a8a;
+        --desert-brown: #8B4513;
+        --sunset-orange: #FF8C00;
+      }
+
+      body {
+        font-family: 'Georgia', serif;
+        background: linear-gradient(135deg, var(--desert-sand) 0%, #F4E4BC 50%, var(--desert-gold) 100%);
+        min-height: 100vh;
+      }
+
+      .navbar {
+        background: linear-gradient(90deg, rgba(28, 25, 25, 0.95) 0%, rgba(139, 69, 19, 0.95) 100%) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+      }
+
+      .nav-hover {
+        transition: transform 0.3s ease;
+      }
+
+      .nav-hover:hover {
+        transform: scale(1.1);
+      }
+
+      .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="desert" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23F4E4BC;stop-opacity:1" /><stop offset="50%" style="stop-color:%23DAA520;stop-opacity:1" /><stop offset="100%" style="stop-color:%23CD853F;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="600" fill="url(%23desert)"/><polygon points="200,400 300,350 400,380 500,340 600,370 700,330 800,360 900,320 1000,350 1100,310 1200,340 1200,600 0,600" fill="%23D2B48C" opacity="0.8"/><polygon points="100,450 250,400 400,430 550,390 700,420 850,380 1000,410 1150,370 1200,400 1200,600 0,600" fill="%23DEB887" opacity="0.6"/></svg>');
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+      }
+
+      .hero-content h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+        margin-bottom: 1rem;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      .hero-content p {
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section-title {
+        color: var(--desert-brown);
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 3rem 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .character-card {
+        background: linear-gradient(145deg, white, #f8f9fa);
+        border-radius: 20px;
+        padding: 2rem;
+        margin: 1rem 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 3px solid var(--desert-gold);
+      }
+
+      .character-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      }
+
+      .character-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid var(--desert-gold);
+        margin: 0 auto 1rem;
+        display: block;
+      }
+
+      .story-section {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        padding: 3rem;
+        margin: 3rem 0;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      }
+
+      .timeline {
+        position: relative;
+        padding: 2rem 0;
+      }
+
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(to bottom, var(--desert-gold), var(--desert-brown));
+        transform: translateX(-50%);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin: 2rem 0;
+        padding: 0 2rem;
+      }
+
+      .timeline-item:nth-child(odd) {
+        text-align: right;
+        padding-right: 2rem;
+        padding-left: 0;
+      }
+
+      .timeline-item:nth-child(even) {
+        text-align: left;
+        padding-left: 2rem;
+        padding-right: 0;
+      }
+
+      .timeline-content {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        position: relative;
+        border: 2px solid var(--desert-gold);
+      }
+
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: var(--desert-gold);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        border: 4px solid white;
+      }
+
+      .stats-card {
+        background: linear-gradient(135deg, var(--royal-blue), #3b82f6);
+        color: white;
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .stats-card:hover {
+        transform: scale(1.05);
+      }
+
+      .stats-number {
+        font-size: 3rem;
+        font-weight: bold;
+        display: block;
+      }
+
+      .floating-element {
+        position: absolute;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .desert-icon {
+        color: var(--desert-gold);
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      .btn-custom {
+        background: linear-gradient(45deg, var(--desert-gold), var(--sunset-orange));
+        border: none;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+
+      .btn-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        color: white;
+      }
+
+      .parallax-bg {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+        .hero-content p {
+          font-size: 1.2rem;
+        }
+        .timeline::before {
+          left: 30px;
+        }
+        .timeline-item {
+          padding-left: 60px;
+          text-align: left;
+        }
+        .timeline-item::before {
+          left: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+      <div class="container-fluid">
+        <div class="img-nav">
+          <img src="https://logos-world.net/wp-content/uploads/2021/02/One-Piece-Logo.png" alt="One Piece Logo" style="width: 83px;" class="nav-hover">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#characters">Characters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#story">Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#battles">Battles</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="floating-element" style="top: 20%; left: 10%;">
+        <i class="fas fa-star" style="color: gold; font-size: 2rem;"></i>
+      </div>
+      <div class="floating-element" style="top: 30%; right: 15%; animation-delay: 1s;">
+        <i class="fas fa-crown" style="color: gold; font-size: 2.5rem;"></i>
+      </div>
+      <div class="floating-element" style="bottom: 20%; left: 20%; animation-delay: 2s;">
+        <i class="fas fa-gem" style="color: gold; font-size: 2rem;"></i>
+      </div>
+      
+      <div class="hero-content">
+        <h1>ALABASTA ARC</h1>
+        <p>The Desert Kingdom's Greatest Adventure</p>
+        <button class="btn btn-custom mt-3">
+          <i class="fas fa-play me-2"></i>Explore the Story
+        </button>
+      </div>
+    </section>
+
+    <div class="container-fluid">
+      <!-- Stats Section -->
+      <div class="row my-5">
+        <div class="col-md-3 mb-4">
+          <div class="stats-card">
+            <i class="fas fa-scroll desert-icon"></i>
+            <span class="stats-number">78</span>
+            <p>Episodes</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="stats-card">
+            <i class="fas fa-users desert-icon"></i>
+            <span class="stats-number">15+</span>
+            <p>Main Characters</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="stats-card">
+            <i class="fas fa-sword desert-icon"></i>
+            <span class="stats-number">12</span>
+            <p>Major Battles</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="stats-card">
+            <i class="fas fa-map desert-icon"></i>
+            <span class="stats-number">5</span>
+            <p>Locations</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Characters Section -->
+      <section id="characters" class="my-5">
+        <h2 class="section-title">
+          <i class="fas fa-users me-3"></i>Main Characters
+        </h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="character-card">
+              <img src="https://static.wikia.nocookie.net/onepiece/images/6/6d/Monkey_D._Luffy_Anime_Post_Timeskip_Infobox.png" alt="Luffy" class="character-image">
+              <h4 class="text-center mb-3" style="color: var(--desert-brown);">Monkey D. Luffy</h4>
+              <p class="text-center">Captain of the Straw Hat Pirates, determined to save Alabasta and help his friend Vivi reclaim her kingdom.</p>
+              <div class="text-center">
+                <span class="badge bg-danger me-2">Captain</span>
+                <span class="badge bg-warning">Rubber Powers</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="character-card">
+              <img src="https://static.wikia.nocookie.net/onepiece/images/b/be/Nefertari_Vivi_Anime_Infobox.png" alt="Vivi" class="character-image">
+              <h4 class="text-center mb-3" style="color: var(--desert-brown);">Nefertari Vivi</h4>
+              <p class="text-center">Princess of Alabasta Kingdom, fighting to save her country from the evil Baroque Works organization.</p>
+              <div class="text-center">
+                <span class="badge bg-primary me-2">Princess</span>
+                <span class="badge bg-info">Diplomat</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="character-card">
+              <img src="https://static.wikia.nocookie.net/onepiece/images/3/36/Crocodile_Anime_Infobox.png" alt="Crocodile" class="character-image">
+              <h4 class="text-center mb-3" style="color: var(--desert-brown);">Sir Crocodile</h4>
+              <p class="text-center">The main antagonist, one of the Seven Warlords of the Sea with the power to control sand.</p>
+              <div class="text-center">
+                <span class="badge bg-dark me-2">Shichibukai</span>
+                <span class="badge bg-secondary">Sand Powers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story Section -->
+      <section id="story" class="my-5">
+        <div class="story-section">
+          <h2 class="section-title">
+            <i class="fas fa-book me-3"></i>Story Timeline
+          </h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h4>Meeting Princess Vivi</h4>
+                <p>The Straw Hats discover that Miss Wednesday is actually Princess Vivi of Alabasta, and learn about the civil war threatening her kingdom.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h4>Journey to Alabasta</h4>
+                <p>The crew travels through various islands including Little Garden and Drum Island, facing challenges and growing stronger.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h4>Arrival at Alabasta</h4>
+                <p>The Straw Hats finally reach the desert kingdom and witness the devastating effects of the ongoing civil war.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h4>The Final Battle</h4>
+                <p>Luffy confronts Crocodile in an epic battle while the crew works to stop the civil war and save the kingdom.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h4>Peace Restored</h4>
+                <p>With Crocodile defeated, peace returns to Alabasta and the Straw Hats continue their journey with new bonds forged.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Battles Section -->
+      <section id="battles" class="my-5">
+        <h2 class="section-title">
+          <i class="fas fa-fist-raised me-3"></i>Epic Battles
+        </h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="character-card">
+              <h4 style="color: var(--desert-brown);">
+                <i class="fas fa-fire me-2"></i>Luffy vs Crocodile
+              </h4>
+              <p>The ultimate showdown between the Straw Hat captain and the Sand-Sand Fruit user in the heart of Alabasta.</p>
+              <div class="mt-3">
+                <span class="badge bg-danger me-2">Round 1: Defeat</span>
+                <span class="badge bg-warning me-2">Round 2: Defeat</span>
+                <span class="badge bg-success">Round 3: Victory</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="character-card">
+              <h4 style="color: var(--desert-brown);">
+                <i class="fas fa-wind me-2"></i>Zoro vs Mr. 1
+              </h4>
+              <p>Zoro faces his greatest challenge yet against the Dice-Dice Fruit user, learning to cut steel in the process.</p>
+              <div class="mt-3">
+                <span class="badge bg-success me-2">Victory</span>
+                <span class="badge bg-info">New Technique</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="character-card">
+              <h4 style="color: var(--desert-brown);">
+                <i class="fas fa-heart me-2"></i>Sanji vs Mr. 2
+              </h4>
+              <p>An emotional battle against the Clone-Clone Fruit user who can copy anyone's appearance.</p>
+              <div class="mt-3">
+                <span class="badge bg-success me-2">Victory</span>
+                <span class="badge bg-warning">Identity Crisis</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="character-card">
+              <h4 style="color: var(--desert-brown);">
+                <i class="fas fa-explosion me-2"></i>Usopp vs Mr. 4 & Miss Merry Christmas
+              </h4>
+              <p>Usopp proves his worth as a brave warrior of the sea in this intense battle.</p>
+              <div class="mt-3">
+                <span class="badge bg-success me-2">Victory</span>
+                <span class="badge bg-primary">Character Growth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4" style="background-color: var(--desert-brown); color: white;">
+      <div class="container">
+        <p>&copy; 2024 One Piece Alabasta Arc. All rights reserved.</p>
+        <p>
+          <i class="fas fa-skull-crossbones me-2"></i>
+          "People's dreams... never end!" - Marshall D. Teach
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Add scroll effect to navbar
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.style.backgroundColor = 'rgba(28, 25, 25, 0.98)';
+        } else {
+          navbar.style.backgroundColor = 'rgba(28, 25, 25, 0.95)';
+        }
+      });
+
+      // Animate elements on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Observe all cards
+      document.querySelectorAll('.character-card, .stats-card, .timeline-item').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+      });
+    </script>
+  </body>
+</html>

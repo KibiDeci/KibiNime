@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manga</title>
+    <link rel="stylesheet" href="stylemanga.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark" style="background-color: rgb(28, 25, 25);" id="E1">
+      <div class="container-fluid">
+        <div class="img-nav">
+          <img src="img/One-Piece-Logo-1999.png" alt="" style="width: 83px;" class="nav-hover">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron Manga Info -->
+    <div class="main1 jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="container1 text-center">
+          <div class="row">
+            <div class="manga-box col">
+              <img src="img/manga.jpg" alt="">
+              <div class="manga-info">
+                <h1 class="title">One Piece</h1>
+                <h2 class="author-name-info"><span class="span-author-info">Author : </span>Eichiro Oda</h2>
+                <div class="mb-2">
+                  <span class="badge bg-light text-dark border">Action</span>
+                  <span class="badge bg-light text-dark border">Adventure</span>
+                  <span class="badge bg-light text-dark border">Fantasy</span>
+                </div>
+                <p>
+                  One Piece mengisahkan petualangan Monkey D. Luffy, seorang pemuda yang memperoleh kekuatan tubuh elastis setelah memakan Buah Iblis.
+                  Dengan impian menjadi Raja Bajak Laut, Luffy membentuk kru Topi Jerami dan menjelajahi lautan berbahaya bernama Grand Line untuk mencari
+                  harta karun legendaris “One Piece”. Dalam perjalanannya, mereka menghadapi musuh kuat, membongkar rahasia dunia, dan menjalin persahabatan
+                  yang tak tergoyahkan. Cerita ini memadukan aksi, humor, dan nilai-nilai tentang impian, kebebasan, dan tekad yang tak pernah padam.
+                </p>
+              </div>
+            </div>
+            <div class="rating col">
+              <p class="star-rating">★★★★☆ <span class="num-rating">4.89</span></p>
+            </div>
+            <div class="input-read">
+              <a class="read-a" href="panel1052.html">
+                <button class="btn btn-primary">Read New Chapter</button>
+              </a>
+            </div>
+          </div>
+
+          <hr class="garis-kustom me-3" />
+          <div class="container2 text-center">
+            <div class="row">
+              <div class="chapter-list col-md-8">
+                <div class="container-chapter-list container">
+                  <h1>Chapter List</h1>
+                  <ul class="row-chapter" id="chaptersContainer">
+                    <!-- Initial chapters (1-6) -->
+                    <li class="row-chapter-li">
+                      <div class="row-1 row">
+                        <div class="chapter-col1 col">
+                          <a class="chapter-1" href="panel1.html">Chapter 1</a>
+                        </div>
+                        <div class="chapter-col1 col">
+                          <a class="chapter-1" href="panel2.html">Chapter 2</a>
+                        </div>
+                        <div class="chapter-col1 col">
+                          <a class="chapter-1" href="panel3.html">Chapter 3</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="row-chapter-li">
+                      <div class="row-1 row">
+                        <div class="chapter-col1 col">
+                          <a class="chapter-1" href="panel4.html">Chapter 4</a>
+                        </div>
+                        <div class="chapter-col1 col">
+                          <a class="chapter-1" href="panel5.html">Chapter 5</a>
+                        </div>
+                        <div class="chapter-col1 col">
+                          <a class="chapter-1" href="panel6.html">Chapter 6</a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="button-more">
+                    <button id="loadChaptersBtn" class="button-more-chapter btn btn-primary mt-3">See More Chapters</button>
+                  </div>
+                </div>
+              </div>
+              <div class="fun-fact col-md-4">
+                <div class="fun-fact-container container">
+                    <h3>Tahukah Kamu...?</h3>
+                </div>
+                <div class="fun-fact-list">
+                    <div class="fun-fact-row row">
+                      <div class="li-fun-fact1">
+                        <li>Di Grand Line, log pose adalah kompas khusus yang digunakan karena medan magnet antar pulau sangat kacau. 
+                          Setiap pulau punya medan unik, sehingga log pose harus “mengunci” arah sebelum bisa menunjukkan tujuan berikutnya.
+                        </li>
+                      </div>
+                      <div class="li-fun-fact2">
+                        <li>
+                          Pulau Little Garden dihuni oleh dua raksasa dari Elbaf yang telah berduel selama lebih dari 100 tahun 
+                          hanya untuk menentukan siapa yang lebih kuat.
+                        </li>
+                      </div>
+                      <div class="li-fun-fact2">
+                        <li>
+                          Di Skypiea, penduduknya menggunakan kerang ajaib bernama Dial untuk menyimpan suara, angin, 
+                          bahkan serangan—teknologi unik yang tidak ditemukan di lautan biru.
+                        </li>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadBtn = document.getElementById('loadChaptersBtn');
+        const container = document.getElementById('chaptersContainer');
+        
+        let loadedChapters = 6;
+        const chaptersPerLoad = 6;
+        const totalChapters = 100;
+        
+        loadBtn.addEventListener('click', function() {
+          loadBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...';
+          loadBtn.disabled = true;
+          
+          setTimeout(() => {
+            for (let i = loadedChapters; i < loadedChapters + chaptersPerLoad && i < totalChapters; i += 3) {
+              const row = document.createElement('li');
+              row.className = 'row-chapter-li';
+              
+              const rowDiv = document.createElement('div');
+              rowDiv.className = 'row-1 row';
+              
+              for (let j = 0; j < 3 && (i + j) < totalChapters; j++) {
+                const chapterNum = i + j + 1;
+                const colDiv = document.createElement('div');
+                colDiv.className = 'chapter-col1 col';
+                
+                const link = document.createElement('a');
+                link.className = 'chapter-1';
+                link.href = `chapter-${chapterNum}.html`;
+                link.textContent = `Chapter ${chapterNum}`;
+                
+                colDiv.appendChild(link);
+                rowDiv.appendChild(colDiv);
+              }
+              
+              row.appendChild(rowDiv);
+              container.appendChild(row);
+            }
+            
+            loadedChapters += chaptersPerLoad;
+            
+            if (loadedChapters >= totalChapters) {
+              loadBtn.style.display = 'none';
+            } else {
+              loadBtn.innerHTML = 'See More Chapters';
+              loadBtn.disabled = false;
+            }
+          }, 300);
+        });
+      });
+    </script>
+  </body>
+</html>
