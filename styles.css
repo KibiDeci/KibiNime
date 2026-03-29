@@ -1171,3 +1171,38 @@ footer {
         flex-direction: column;
     }
 }
+
+/* ── login.html ── */
+/* ── navbar-login ── */
+.navbar-login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:rgba(10, 10, 15, 0.95);
+    transition: background 0.3s;
+}
+
+.navbar-login .logo{
+    margin-left: -60px;
+}
+
+.nav-right{
+    margin-right: -20px;
+}
+
+/* ── hero-login ── */
+.hero-login{
+    background: var(--bg-surface);
+    
+}
+
+.hero-login .login h1{
+    color: white;
+    text-align: center;
+}
