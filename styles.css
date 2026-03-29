@@ -1206,3 +1206,119 @@ footer {
     color: white;
     text-align: center;
 }
+
+.login-box{
+    justify-content: center;
+}
+
+.login-section {
+  width: 100%;
+  max-width: 440px;
+  
+}
+
+.login-section {
+  width: 100%;
+  max-width: 440px;
+  margin-left: 550px;
+  margin-top: 75px;
+}
+
+/* Garis oranye sudut kiri atas */
+.login-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 48px; height: 3px;
+  background: var(--accent-dim);
+}
+
+/* Input group */
+.user-box {
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.user-box input {
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #2a2a2a;
+  color: #f0ece4;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.user-box input::placeholder { color: transparent; }
+
+/* Animated underline */
+.user-box::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1.5px;
+  background: var(--accent-dim);
+  transition: width 0.35s ease;
+}
+.user-box:focus-within::after { width: 100%; }
+
+/* Floating label */
+.user-box label {
+  position: absolute;
+  top: 10px; left: 0;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+  pointer-events: none;
+  transition: top 0.25s, font-size 0.25s, color 0.25s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:not(:placeholder-shown) ~ label {
+  top: -16px;
+  font-size: 0.7rem;
+  color: var(--accent-dim);
+}
+
+/* Tombol submit */
+.btn-submit {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 13px 0;
+  background: transparent;
+  border: 1.5px solid #2e2e2e;
+  border-radius: 50px;
+  color: #f0ece4;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
+}
+
+.btn-submit:hover {
+  border-color: var(--accent-dim);
+  background: var(--accent-dim);
+  color: #fff;
+  box-shadow: 0 0 24px rgba(224,92,0,0.35);
+}
+
+/* Link bawah */
+.login-links {
+  margin-top: 24px;
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
