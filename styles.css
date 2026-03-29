@@ -743,7 +743,7 @@ section {
 
 /* ── GENRES ── */
 
-.premium {
+.subscription {
     text-align: center;
     background: var(--bg-card);
 }
@@ -756,15 +756,15 @@ section {
     color: white;
 }
 
-.premium h1 {
+.subscription h1 {
     font-size: 10vh;
 }
 
-.premium .tittle h1 {
+.subscription .title h1 {
     text-align: center;
 }
 
-.premium .genre-pills {
+.subscription .genre-pills {
     justify-content: center;
 }
 
