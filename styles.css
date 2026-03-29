@@ -403,8 +403,8 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          margin-bottom: 28px;
           padding: 0 60px;
+          
       }
       
       .section-title {
@@ -550,6 +550,7 @@
       
       .cards-scroll-wrapper {
           position: relative;
+
       }
       
       .cards-scroll {
@@ -559,6 +560,7 @@
           padding: 0 60px 20px;
           scrollbar-width: none;
           scroll-behavior: smooth;
+          padding-top: 20px;
       }
       
       .cards-scroll::-webkit-scrollbar {
@@ -687,27 +689,66 @@
       }
       /* ── TRENDING BADGE ── */
       
+      /* Section terluar */
+        .trending-anime {
+            background: var(--bg-card);
+        }
+        
+
+        .trending-num-1 {
+          position: absolute;
+          bottom: 55px;
+          left: 1px;
+          font-family: "Montserrat", sans-serif;
+          font-size: 80px;
+          font-weight: bolder;
+          line-height: 1;
+          color: var(--accent-dim);
+          -webkit-text-stroke: 1px rgba(0, 0, 0, 1);
+      }
+
       .trending-num {
           position: absolute;
-          bottom: 70px;
-          left: 8px;
-          font-family: var(--font-display);
+          bottom: 55px;
+          left: 1px;
+          font-family: "Montserrat", sans-serif;
           font-size: 56px;
+          font-weight: bolder;
           line-height: 1;
-          color: rgba(255, 255, 255, 0.08);
-          -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+          color: var(--accent-dim);
+          -webkit-text-stroke: 1px rgba(0, 0, 0, 1);
       }
+
       /* ── GENRES ── */
       
-      .genre-pills {
-          display: flex;
-          gap: 10px;
-          flex-wrap: wrap;
-          padding: 0 60px;
+      .premium {
+        text-align: center;
+        background: var(--bg-card);
+    }
+      .brand-name{
+        color: var(--accent-dim);
       }
+
+      .plus{
+        color: white;
+      }
+
+      .premium h1{
+        font-size: 10vh;
+      }
+
+      .premium .tittle h1{
+        text-align: center;
+      }
+
+
+        .premium .genre-pills {
+            justify-content: center;
+    }
       
       .genre-pill {
-          padding: 8px 20px;
+          padding: 10px 20px;
+          margin: 10px;
           border-radius: 100px;
           border: 1.5px solid var(--border);
           background: var(--bg-card);
@@ -725,6 +766,9 @@
           border-color: var(--accent);
           color: #0a0a0f;
       }
+
+      
+
       /* ── FAQ ── */
       
       .faq-section {
