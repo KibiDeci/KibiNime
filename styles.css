@@ -1333,6 +1333,21 @@ footer {
   padding: 13px 0;
   background: transparent;
   border: 1.5px solid #3a3a3a;
+  border-radius: 5px;
+  color: #f0ece4;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.login-button1 button {
+  width: 100%;
+  padding: 13px 0;
+  background: transparent;
+  border: 1.5px solid #3a3a3a;
   border-radius: 50px;
   color: #f0ece4;
   font-family: 'Rajdhani', sans-serif;
@@ -1342,8 +1357,22 @@ footer {
   cursor: pointer;
 }
 
-.login-button button:hover {
+.login-button1 button:hover {
   border-color: #8ab82e;
   background: #8ab82e;
   color: #fff;
+}
+
+.forgot-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.forgot-section a{
+    text-decoration: none;
+    color: var(--accent-dim);
+    padding: 30px;
+    text-align: center;
 }
