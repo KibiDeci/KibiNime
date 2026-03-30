@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KibiNime — Watch Anime Free</title>
+    <title>KibiNime</title>
     <link href="styles.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
@@ -26,10 +26,11 @@
         <button class="close-nav" onclick="closeMobileNav()"><i class="fas fa-times"></i></button>
         <a href="#" class="logo">KibiNime</a>
         <ul>
-            <li><a href="#trending-anime">Trending</a></li>
-            <li><a href="#subscription">Subscription</a></li>
+            <li><a href="trending.html">Trending</a></li>
+            <li><a href="new.html">New</a></li>
+            <li><a href="genres">Genres</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
             <li><a href="login.html" style="color:var(--accent)">Log In</a></li>
         </ul>
     </nav>
@@ -38,12 +39,13 @@
     <nav class="navbar sticky-top" id="navbar">
         <a href="#" class="logo">KibiNime</a>
         <ul class="nav-links">
-            <li><a href="#trending-anime" class="active">Trending</a></li>
-            <li><a href="#sub">Subscription</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="trending.html">Trending</a></li>
+            <li><a href="new.html">New</a></li>
+            <li><a href="genres">Genres</a></li>
         </ul>
         <div class="nav-right">
             <span class="nav-icon" onclick="openSearch()"><i class="fas fa-search"></i></span>
+            <span class="nav-icon"><i class="fas fa-bell"></i></span>
             <div class="login-button">
                 <a href="login.html">
                     <button>Login</button>
@@ -317,147 +319,6 @@
         </div>
     </section>
 
-
-    <!-- Subscription -->
-    <section class="subscription" id="subscription">
-        <div class="subscription-wrapper">
-            <div class="title reveal">
-                <h1 class="section-title"><span class="brand-name">KibiNime</span> <span class="plus">Plus</span></h1>
-            </div>
-            <div class="subscription-cards reveal">
-                <!-- Free Plan -->
-                <div class="sub-card">
-                    <a href="login.html" class="sub-card-link"></a>
-                    <div class="sub-card-header">
-                        <h2 class="sub-card-title">Free Plan</h2>
-                        <p class="sub-card-desc">Daftar dan coba nonton film gratis setiap bulan di kolom 'Gratis'</p>
-                    </div>
-                    <div class="sub-price-block">
-                        <div class="sub-price-main">
-                            <span class="sub-currency">Rp</span>
-                            <span class="sub-amount">0</span>
-                        </div>
-                        <span class="sub-price-bulanan">selamanya</span>
-                    </div>
-                    <ul class="sub-features">
-                        <li><i class="fa-solid fa-check"></i>Nikmati 10 serial pilihan GRATIS di kolom [Gratis] setiap bulan</li>
-                        <li><i class="fa-solid fa-check"></i>Login hingga 5 perangkat</li>
-                        <li><i class="fa-solid fa-check"></i>Nonton di 2 perangkat berbeda secara bersamaan</li>
-                    </ul>
-                </div>
-
-            <!-- Bulanan (featured) -->
-                <div class="sub-card featured">
-                    <a href="login.html" class="sub-card-link"></a>
-                    <div class="sub-card-header">
-                        <h2 class="sub-card-title">Bulanan</h2>
-                        <p class="sub-card-desc">Nikmati semua konten premium, bayar per bulan.</p>
-                    </div>
-                    <div class="sub-price-block">
-                        <div class="sub-price-main">
-                            <span class="sub-currency">Rp</span>
-                            <span class="sub-amount">45.000</span>
-                        </div>
-                        <span class="sub-price-bulanan">per bulan</span>
-                    </div>
-                    <ul class="sub-features">
-                        <li><i class="fa-solid fa-check"></i>Nonton konten premium sepuasnya</li>
-                        <li><i class="fa-solid fa-check"></i>Login sampai 5 perangkat</li>
-                        <li><i class="fa-solid fa-check"></i>Nonton di 2 perangkat berbeda secara bersamaan</li>
-                    </ul>
-                </div>
- 
-                <!-- TAHUNAN -->
-                <div class="sub-card">
-                    <a href="login.html" class="sub-card-link"></a>
-                    <div class="sub-card-header">
-                        <h2 class="sub-card-title">Tahunan</h2>
-                        <p class="sub-card-desc">Paket terlengkap dengan harga paling hemat.</p>
-                    </div>
-                    <div class="sub-price-block">
-                        <div class="sub-price-main">
-                            <span class="sub-currency">Rp</span>
-                            <span class="sub-amount">29.000</span>
-                        </div>
-                        <span class="sub-price-bulanan">per bulan &nbsp;·&nbsp; <s style="color:var(--text-muted)">Rp 45.000</s></span>
-                        <span class="sub-price-tahunan">Rp 349.000 / tahun</span>
-                    </div>
-                    <ul class="sub-features">
-                        <li><i class="fa-solid fa-check"></i>Nonton konten premium sepuasnya</li>
-                        <li><i class="fa-solid fa-check"></i>Login hingga 5 perangkat</li>
-                        <li><i class="fa-solid fa-check"></i>Nonton di 2 perangkat berbeda secara bersamaan</li>
-                        <li><i class="fa-solid fa-check"></i>Hingga 50% lebih murah</li>
-                    </ul>
-                </div>
- 
-            </div>
-
-
-            <!-- <div class="genre-pills">
-                <a href=" " class="genre-pill">
-                    Monthly
-                </a>
-                <a href=" " class="genre-pill">
-                    Year
-            </a> -->
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <div class="faq-section">
-        <div class="faq-inner">
-            <h2 class="faq-title reveal">Frequently Asked Questions</h2>
-
-            <div class="faq-item reveal">
-                <button class="faq-question" onclick="toggleFaq(this)">
-        What is KibiNime?
-        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-      </button>
-                <div class="faq-answer">KibiNime is your go-to platform for watching anime, movies, and TV series for free. We offer a vast library of content in both subbed and dubbed versions, with new episodes added daily.</div>
-            </div>
-
-            <div class="faq-item reveal">
-                <button class="faq-question" onclick="toggleFaq(this)">
-        How much does KibiNime Cost?
-        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-      </button>
-                <div class="faq-answer">KibiNime is completely free to use! No subscriptions, no hidden fees. We also offer a premium tier for ad-free viewing and access to exclusive early releases starting at just $4.99/month.</div>
-            </div>
-
-            <div class="faq-item reveal">
-                <button class="faq-question" onclick="toggleFaq(this)">
-        Where can I watch?
-        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-      </button>
-                <div class="faq-answer">You can watch KibiNime on any modern web browser — desktop, tablet, or mobile. We also have dedicated apps for iOS and Android, as well as Smart TV support for major platforms.</div>
-            </div>
-
-            <div class="faq-item reveal">
-                <button class="faq-question" onclick="toggleFaq(this)">
-        How do I cancel?
-        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-      </button>
-                <div class="faq-answer">If you have a premium subscription, you can cancel anytime from your account settings. There are no cancellation fees and your access continues until the end of your billing period.</div>
-            </div>
-
-            <div class="faq-item reveal">
-                <button class="faq-question" onclick="toggleFaq(this)">
-        What can I watch on KibiNime?
-        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-      </button>
-                <div class="faq-answer">KibiNime hosts thousands of anime titles including the latest seasonal anime, classic series, anime movies, and exclusive simulcast content. We also feature a growing library of international TV shows and movies.</div>
-            </div>
-
-            <div class="faq-item reveal">
-                <button class="faq-question" onclick="toggleFaq(this)">
-        Is KibiNime good for kids?
-        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-      </button>
-                <div class="faq-answer">KibiNime has content for all ages. Our platform includes a Kids Mode with curated age-appropriate anime such as Pokémon, Doraemon, and Studio Ghibli films. Parental controls are also available in account settings.</div>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer>
         <div class="footer-grid">
@@ -469,7 +330,7 @@
                 <h4>Company</h4>
                 <ul>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Careers</a></li>f
                     <li><a href="#">Investors</a></li>
                     <li><a href="#">Press</a></li>
                 </ul>
