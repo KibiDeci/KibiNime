@@ -1322,3 +1322,28 @@ footer {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+
+.login-button {
+  display: flex;
+  justify-content: center;
+}
+
+.login-button button {
+  width: 100%;
+  padding: 13px 0;
+  background: transparent;
+  border: 1.5px solid #3a3a3a;
+  border-radius: 50px;
+  color: #f0ece4;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+}
+
+.login-button button:hover {
+  border-color: #8ab82e;
+  background: #8ab82e;
+  color: #fff;
+}
