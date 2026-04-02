@@ -196,3 +196,32 @@ a {
     .field input:focus ~ .underline {
       width: 100%;
     }
+
+    .login-button1 {
+      background: var(--bg-card);
+      padding: 0.75rem;
+    }
+
+.login-button1 {
+  display: flex;
+  justify-content: center;
+}
+
+.login-button1 button:hover {
+  color: #8ab82e;
+}
+
+.login-button1 button {
+  width: 100%;
+  padding: 13px 0;
+  background: transparent;
+  border: 0px;
+  border-radius: 5px;
+  color: #f0ece4;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  padding: 8px;
+}

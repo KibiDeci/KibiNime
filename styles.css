@@ -1213,8 +1213,7 @@ footer {
   .btn-login {
     display: none;
   }
-  .login-button,
-  .login-button1 {
+  .login-button{
     display: none;
   }
   .hamburger {
