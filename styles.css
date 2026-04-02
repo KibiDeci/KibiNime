@@ -1217,6 +1217,12 @@ footer {
   .login-button{
     display: none;
   }
+  .nav-links-login{
+    display: none;
+  }
+  .navbar-login .logo {
+  margin-left: 0px;
+}
   .hamburger {
     display: flex;
   }
