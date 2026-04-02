@@ -90,12 +90,20 @@ a {
   color: var(--text);
 }
 
-.logo {
+.logo-login {
   font-family: var(--font-display);
   font-size: 30px;
   letter-spacing: 2px;
   color: var(--accent);
   text-decoration: none;
+}
+
+.navbar-login .logo {
+  margin-left: -70px;
+}
+
+.nav-right-login {
+  margin-right: -20px;
 }
 
 .nav-right {
@@ -113,6 +121,29 @@ a {
 }
 
 .nav-icon:hover {
+  color: var(--text);
+}
+
+.nav-links-login {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav-links-login a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.nav-links-login a:hover,
+.nav-links-login a.active {
   color: var(--text);
 }
 
@@ -134,7 +165,7 @@ a {
 
 /* ── Hero Section ── */
 .login-section{
-  background: var(--bg-surface);
+  background: var(--bg-card);
 }
 
 .login-section-tittle h1{
@@ -200,28 +231,48 @@ a {
     .login-button1 {
       background: var(--bg-card);
       padding: 0.75rem;
+      background: var(--bg-surface);
     }
 
 .login-button1 {
   display: flex;
   justify-content: center;
+  border-radius: 50px
+  
 }
 
-.login-button1 button:hover {
-  color: #8ab82e;
+.login-button1:hover {
+  background: #8ab82e;
+  
 }
 
 .login-button1 button {
   width: 100%;
-  padding: 13px 0;
   background: transparent;
   border: 0px;
   border-radius: 5px;
   color: #f0ece4;
   font-family: "Rajdhani", sans-serif;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   letter-spacing: 0.18em;
   cursor: pointer;
-  padding: 8px;
+}
+
+.forgot-register{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  margin-left: -20px;
+}
+
+.forgot-register a{
+  text-decoration: none;
+  color: var(--text-muted);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  transition: color 0.2s;
+  padding-left: 20px;
+  padding-right: 20px;
 }

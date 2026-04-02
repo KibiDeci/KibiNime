@@ -158,6 +158,7 @@ a {
   gap: 5px;
   cursor: pointer;
   padding: 4px;
+  margin-right: -rem;
 }
 
 .hamburger span {
@@ -1221,6 +1222,7 @@ footer {
   }
   .hero-content {
     padding: 0 20px 80px;
+    margin-left: 20px;
   }
   .hero-title {
     font-size: 42px;
