@@ -1,366 +1,536 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KibiNime</title>
-    <link href="styles.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-</head>
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- SEARCH OVERLAY -->
     <div class="search-overlay" id="searchOverlay">
-        <button class="close-search" onclick="closeSearch()"><i class="fas fa-times"></i></button>
-        <div class="search-box">
-            <input class="search-input" type="text" id="searchInput" placeholder="Search anime, movies..." />
-        </div>
+      <button class="close-search" onclick="closeSearch()">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="search-box">
+        <input
+          class="search-input"
+          type="text"
+          id="searchInput"
+          placeholder="Search anime, movies..."
+        />
+      </div>
     </div>
 
     <!-- MOBILE NAV -->
-    <div class="mobile-overlay sticky" id="mobileOverlay" onclick="closeMobileNav()"></div>
+    <div
+      class="mobile-overlay sticky"
+      id="mobileOverlay"
+      onclick="closeMobileNav()"
+    ></div>
     <nav class="mobile-nav" id="mobileNav">
-        <button class="close-nav" onclick="closeMobileNav()"><i class="fas fa-times"></i></button>
-        <a href="#" class="logo">KibiNime</a>
-        <ul>
-            <li><a href="trending.html">Trending</a></li>
-            <li><a href="new.html">New</a></li>
-            <li><a href="genres">Genres</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="login.html" style="color:var(--accent)">Log In</a></li>
-        </ul>
+      <button class="close-nav" onclick="closeMobileNav()">
+        <i class="fas fa-times"></i>
+      </button>
+      <a href="#" class="logo">KibiNime</a>
+      <ul>
+        <li><a href="trending.html">Trending</a></li>
+        <li><a href="new.html">New</a></li>
+        <li><a href="genres">Genres</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html" style="color: var(--accent)">Log In</a></li>
+      </ul>
     </nav>
 
     <!-- NAVBAR -->
     <nav class="navbar sticky-top" id="navbar">
-        <a href="#" class="logo">KibiNime</a>
-        <ul class="nav-links">
-            <li><a href="trending.html">Trending</a></li>
-            <li><a href="new.html">New</a></li>
-            <li><a href="genres">Genres</a></li>
-        </ul>
-        <div class="nav-right">
-            <span class="nav-icon" onclick="openSearch()"><i class="fas fa-search"></i></span>
-            <span class="nav-icon"><i class="fas fa-bell"></i></span>
-            <div class="login-button">
-                <a href="login.html">
-                    <button>Login</button>
-                </a>
-            </div>
-            <div class="hamburger" onclick="openMobileNav()">
-                <span></span><span></span><span></span>
-            </div>
+      <a href="#" class="logo">KibiNime</a>
+      <ul class="nav-links">
+        <li><a href="trending.html">Trending</a></li>
+        <li><a href="new.html">New</a></li>
+        <li><a href="genres">Genres</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="nav-icon" onclick="openSearch()"
+          ><i class="fas fa-search"></i
+        ></span>
+        <span class="nav-icon"><i class="fas fa-bell"></i></span>
+        <div class="login-button">
+          <a href="login.html">
+            <button>Login</button>
+          </a>
         </div>
+        <div class="hamburger" onclick="openMobileNav()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
     </nav>
 
     <!-- HERO -->
     <section class="hero" id="hero">
-
-        <!-- Slide 1: Chainsaw Man -->
-        <div class="hero-slide active" id="slide-0">
-            <div class="hero-bg">
-                <video autoplay loop muted playsinline>
-                    <source src="https://i.imgur.com/MRDV6hf.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="hero-overlay"></div>
-            <div class="hero-overlay-bottom"></div>
-            <div class="hero-content">
-                <div>
-                    <div class="hero-meta">
-                        <span class="badge-rank">🏆 #1 Most Popular</span>
-                    </div>
-                    <h1 class="hero-title">CHAINSAW MAN</h1>
-                    <p class="hero-desc">Despite the immediate challenges following becoming a devil hunter with the Public Safety Bureau, Denji has quickly adapted to his new life and responsibilities. As the chaos of Denji's first ordeal with Public Safety settles down,
-                        the elite devil hunter Makima decides to take Denji out on a date. Although the date strengthens his affection for Makima and he swears to not fall in love with...</p>
-                    <div class="star-row">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star empty"></i>
-                    </div>
-                    <div class="hero-actions">
-                        <a href="#" class="btn-watch"><i class="fas fa-play"></i> Watch Now</a>
-                        <a href="#" class="btn-trailer">Trailer</a>
-                    </div>
-                </div>
-            </div>
+      <!-- Slide 1: Chainsaw Man -->
+      <div class="hero-slide active" id="slide-0">
+        <div class="hero-bg">
+          <video autoplay loop muted playsinline>
+            <source src="https://i.imgur.com/MRDV6hf.mp4" type="video/mp4" />
+          </video>
         </div>
-
-        <!-- Slide 2: Demon Slayer -->
-        <div class="hero-slide active" id="slide-0">
-            <div class="hero-bg">
-                <video autoplay loop muted playsinline>
-                    <source src="https://i.imgur.com/vYky0AE.mp4" type="video/mp4">
-                </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-overlay-bottom"></div>
+        <div class="hero-content">
+          <div>
+            <div class="hero-meta">
+              <span class="badge-rank">🏆 #1 Most Popular</span>
             </div>
-            <div class="hero-overlay"></div>
-            <div class="hero-overlay-bottom"></div>
-            <div class="hero-content">
-                <div>
-                    <div class="hero-meta">
-                        <span class="badge-rank">🏆 #2 Most Popular</span>
-                    </div>
-                    <h1 class="hero-title">DEMON SLAYER</h1>
-                    <p class="hero-desc">Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders. Though living impoverished on a remote mountain, the Kamado family are able to enjoy a relatively peaceful and happy
-                        life. One day, Tanjirou decides to go down to the local village to make a little money selling charcoal. On his way back, night falls, forcing Tanjirou ...</p>
-                    <div class="star-row">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star empty"></i>
-                    </div>
-                    <div class="hero-actions">
-                        <a href="#" class="btn-watch"><i class="fas fa-play"></i> Watch Now</a>
-                        <a href="#" class="btn-trailer">Trailer</a>
-                    </div>
-                </div>
+            <h1 class="hero-title">CHAINSAW MAN</h1>
+            <p class="hero-desc">
+              Despite the immediate challenges following becoming a devil hunter
+              with the Public Safety Bureau, Denji has quickly adapted to his
+              new life and responsibilities. As the chaos of Denji's first
+              ordeal with Public Safety settles down, the elite devil hunter
+              Makima decides to take Denji out on a date. Although the date
+              strengthens his affection for Makima and he swears to not fall in
+              love with...
+            </p>
+            <div class="star-row">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star empty"></i>
             </div>
+            <div class="hero-actions">
+              <a href="#" class="btn-watch"
+                ><i class="fas fa-play"></i> Watch Now</a
+              >
+              <a href="#" class="btn-trailer">Trailer</a>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Slide 3: One Piece -->
-        <div class="hero-slide active" id="slide-0">
-            <div class="hero-bg">
-                <video autoplay loop muted playsinline>
-                    <source src="https://i.imgur.com/VCt2dJ2.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="hero-overlay"></div>
-            <div class="hero-overlay-bottom"></div>
-            <div class="hero-content">
-                <div>
-                    <div class="hero-meta">
-                        <span class="badge-rank">🏆 #3 Most Popular</span>
-                    </div>
-                    <h1 class="hero-title">ONE PIECE</h1>
-                    <p class="hero-desc">Barely surviving in a barrel after passing through a terrible whirlpool at sea, carefree Monkey D. Luffy ends up aboard a ship under attack by fearsome pirates. Despite being a naive-looking teenager, he is not to be underestimated.
-                        Unmatched in battle, Luffy is a pirate himself who resolutely pursues the coveted One Piece treasure and the King of the Pirates title that comes with it.</p>
-                    <div class="star-row">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star empty"></i>
-                    </div>
-                    <div class="hero-actions">
-                        <a href="#" class="btn-watch"><i class="fas fa-play"></i> Watch Now</a>
-                        <a href="#" class="btn-trailer">Trailer</a>
-                    </div>
-                </div>
-            </div>
+      <!-- Slide 2: Demon Slayer -->
+      <div class="hero-slide active" id="slide-0">
+        <div class="hero-bg">
+          <video autoplay loop muted playsinline>
+            <source src="https://i.imgur.com/vYky0AE.mp4" type="video/mp4" />
+          </video>
         </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-overlay-bottom"></div>
+        <div class="hero-content">
+          <div>
+            <div class="hero-meta">
+              <span class="badge-rank">🏆 #2 Most Popular</span>
+            </div>
+            <h1 class="hero-title">DEMON SLAYER</h1>
+            <p class="hero-desc">
+              Ever since the death of his father, the burden of supporting the
+              family has fallen upon Tanjirou Kamado's shoulders. Though living
+              impoverished on a remote mountain, the Kamado family are able to
+              enjoy a relatively peaceful and happy life. One day, Tanjirou
+              decides to go down to the local village to make a little money
+              selling charcoal. On his way back, night falls, forcing Tanjirou
+              ...
+            </p>
+            <div class="star-row">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star empty"></i>
+            </div>
+            <div class="hero-actions">
+              <a href="#" class="btn-watch"
+                ><i class="fas fa-play"></i> Watch Now</a
+              >
+              <a href="#" class="btn-trailer">Trailer</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!-- Thumbnails -->
-        <div class="hero-thumbs">
-            <div class="hero-thumb active" onclick="goToSlide(0)">
-                <img src="https://cdnb.artstation.com/p/assets/images/images/055/016/361/large/nihit-csm-thumbnail-landscape.jpg" alt="Chainsaw Man" onerror="this.style.background='#2a1a1a'">
-            </div>
-            <div class="hero-thumb" onclick="goToSlide(1)">
-                <img src="https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2025/07/DemonSlayerKimetsunoYaibaInfinityCastle_IMAX_DigitalPosters_US_EN_2x3_2000x3000-e1753142005772.png?resize=696%2C392&ssl=1" alt="Demon Slayer" onerror="this.style.background='#1a1a2a'">
-            </div>
-            <div class="hero-thumb" onclick="goToSlide(2)">
-                <img src="https://wallpapers.com/images/featured/one-piece-pictures-bjm9tdff9yzguoup.jpg" alt="One Piece" onerror="this.style.background='#2a1a1a'">
-            </div>
+      <!-- Slide 3: One Piece -->
+      <div class="hero-slide active" id="slide-0">
+        <div class="hero-bg">
+          <video autoplay loop muted playsinline>
+            <source src="https://i.imgur.com/VCt2dJ2.mp4" type="video/mp4" />
+          </video>
         </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-overlay-bottom"></div>
+        <div class="hero-content">
+          <div>
+            <div class="hero-meta">
+              <span class="badge-rank">🏆 #3 Most Popular</span>
+            </div>
+            <h1 class="hero-title">ONE PIECE</h1>
+            <p class="hero-desc">
+              Barely surviving in a barrel after passing through a terrible
+              whirlpool at sea, carefree Monkey D. Luffy ends up aboard a ship
+              under attack by fearsome pirates. Despite being a naive-looking
+              teenager, he is not to be underestimated. Unmatched in battle,
+              Luffy is a pirate himself who resolutely pursues the coveted One
+              Piece treasure and the King of the Pirates title that comes with
+              it.
+            </p>
+            <div class="star-row">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star empty"></i>
+            </div>
+            <div class="hero-actions">
+              <a href="#" class="btn-watch"
+                ><i class="fas fa-play"></i> Watch Now</a
+              >
+              <a href="#" class="btn-trailer">Trailer</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!-- Controls -->
-        <div class="hero-controls">
-            <button class="ctrl-btn" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
-            <button class="ctrl-btn" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
-            <div class="hero-progress">
-                <div class="progress-bar-hero">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-                <span class="slide-counter" id="slideCounter">01</span>
-            </div>
+      <!-- Thumbnails -->
+      <div class="hero-thumbs">
+        <div class="hero-thumb active" onclick="goToSlide(0)">
+          <img
+            src="https://cdnb.artstation.com/p/assets/images/images/055/016/361/large/nihit-csm-thumbnail-landscape.jpg"
+            alt="Chainsaw Man"
+            onerror="this.style.background = '#2a1a1a'"
+          />
         </div>
+        <div class="hero-thumb" onclick="goToSlide(1)">
+          <img
+            src="https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2025/07/DemonSlayerKimetsunoYaibaInfinityCastle_IMAX_DigitalPosters_US_EN_2x3_2000x3000-e1753142005772.png?resize=696%2C392&ssl=1"
+            alt="Demon Slayer"
+            onerror="this.style.background = '#1a1a2a'"
+          />
+        </div>
+        <div class="hero-thumb" onclick="goToSlide(2)">
+          <img
+            src="https://wallpapers.com/images/featured/one-piece-pictures-bjm9tdff9yzguoup.jpg"
+            alt="One Piece"
+            onerror="this.style.background = '#2a1a1a'"
+          />
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="hero-controls">
+        <button class="ctrl-btn" onclick="prevSlide()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="ctrl-btn" onclick="nextSlide()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="hero-progress">
+          <div class="progress-bar-hero">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="slide-counter" id="slideCounter">01</span>
+        </div>
+      </div>
     </section>
 
     <!-- Trending Anime -->
     <section class="trending-anime">
-        <div>
-            <div class="section-header reveal">
-                <h2 class="section-title">Trending Anime</h2>
-                <a href="#" class="see-all">See All <i class="fas fa-chevron-right" style="font-size:11px; "></i></a>
-            </div>
-            <div class="cards-scroll-wrapper reveal">
-                <button class="scroll-btn prev" onclick="scrollCards( 'trending-scroll', -1)"><i class="fas fa-chevron-left"></i></button>
-                <div class="cards-scroll" id="trending-scroll">
-
-                    <div class="anime-card">
-                        <img src="https://www.themarysue.com/wp-content/uploads/2023/12/One-Piece-anime.jpg?w=1200 " alt="One Piece ">
-                        <div class="trending-num-1" style="font-size: 70;">01</div>
-                        <div class="card-hover-overlay">
-                            <div class="play-icon-big"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="anime-card-info">
-                            <div class="anime-card-title">One Piece</div>
-                            <div class="anime-card-meta">Anime · 1000+ Eps</div>
-                        </div>
-                    </div>
-
-                    <div class="anime-card">
-                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png" alt="Jujutsu Kaisen ">
-                        <div class="anime-card-badge sub">SUB</div>
-                        <div class="trending-num">02</div>
-                        <div class="card-hover-overlay">
-                            <div class="play-icon-big"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="anime-card-info">
-                            <div class="anime-card-title">Jujutsu Kaisen</div>
-                            <div class="anime-card-meta">Anime · 2 Seasons</div>
-                        </div>
-                    </div>
-                    <div class="anime-card">
-                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png" alt="Jujutsu Kaisen ">
-                        <div class="anime-card-badge sub">SUB</div>
-                        <div class="trending-num">02</div>
-                        <div class="card-hover-overlay">
-                            <div class="play-icon-big"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="anime-card-info">
-                            <div class="anime-card-title">Jujutsu Kaisen</div>
-                            <div class="anime-card-meta">Anime · 2 Seasons</div>
-                        </div>
-                    </div>
-                    <div class="anime-card">
-                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png" alt="Jujutsu Kaisen ">
-                        <div class="anime-card-badge sub">SUB</div>
-                        <div class="trending-num">02</div>
-                        <div class="card-hover-overlay">
-                            <div class="play-icon-big"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="anime-card-info">
-                            <div class="anime-card-title">Jujutsu Kaisen</div>
-                            <div class="anime-card-meta">Anime · 2 Seasons</div>
-                        </div>
-                    </div>
-                    <div class="anime-card">
-                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png" alt="Jujutsu Kaisen ">
-                        <div class="anime-card-badge sub">SUB</div>
-                        <div class="trending-num">02</div>
-                        <div class="card-hover-overlay">
-                            <div class="play-icon-big"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="anime-card-info">
-                            <div class="anime-card-title">Jujutsu Kaisen</div>
-                            <div class="anime-card-meta">Anime · 2 Seasons</div>
-                        </div>
-                    </div>
-                    <div class="anime-card">
-                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png" alt="Jujutsu Kaisen ">
-                        <div class="anime-card-badge sub">SUB</div>
-                        <div class="trending-num">02</div>
-                        <div class="card-hover-overlay">
-                            <div class="play-icon-big"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="anime-card-info">
-                            <div class="anime-card-title">Jujutsu Kaisen</div>
-                            <div class="anime-card-meta">Anime · 2 Seasons</div>
-                        </div>
-                    </div>
-                    <div class="anime-card">
-                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png" alt="Jujutsu Kaisen ">
-                        <div class="anime-card-badge sub">SUB</div>
-                        <div class="trending-num">02</div>
-                        <div class="card-hover-overlay">
-                            <div class="play-icon-big"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="anime-card-info">
-                            <div class="anime-card-title">Jujutsu Kaisen</div>
-                            <div class="anime-card-meta">Anime · 2 Seasons</div>
-                        </div>
-                    </div>
-                    <div class="anime-card">
-                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png" alt="Jujutsu Kaisen ">
-                        <div class="anime-card-badge sub">SUB</div>
-                        <div class="trending-num">02</div>
-                        <div class="card-hover-overlay">
-                            <div class="play-icon-big"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="anime-card-info">
-                            <div class="anime-card-title">Jujutsu Kaisen</div>
-                            <div class="anime-card-meta">Anime · 2 Seasons</div>
-                        </div>
-                    </div>
-                    <div class="anime-card">
-                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png" alt="Jujutsu Kaisen ">
-                        <div class="anime-card-badge sub">SUB</div>
-                        <div class="trending-num">02</div>
-                        <div class="card-hover-overlay">
-                            <div class="play-icon-big"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="anime-card-info">
-                            <div class="anime-card-title">Jujutsu Kaisen</div>
-                            <div class="anime-card-meta">Anime · 2 Seasons</div>
-                        </div>
-                    </div>
-                    <div class="anime-card">
-                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png" alt="Jujutsu Kaisen ">
-                        <div class="anime-card-badge sub">SUB</div>
-                        <div class="trending-num">02</div>
-                        <div class="card-hover-overlay">
-                            <div class="play-icon-big"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="anime-card-info">
-                            <div class="anime-card-title">Jujutsu Kaisen</div>
-                            <div class="anime-card-meta">Anime · 2 Seasons</div>
-                        </div>
-                    </div>
-                    <div class="anime-card">
-                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png" alt="Jujutsu Kaisen ">
-                        <div class="anime-card-badge sub">SUB</div>
-                        <div class="trending-num">02</div>
-                        <div class="card-hover-overlay">
-                            <div class="play-icon-big"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="anime-card-info">
-                            <div class="anime-card-title">Jujutsu Kaisen</div>
-                            <div class="anime-card-meta">Anime · 2 Seasons</div>
-                        </div>
-                    </div>
-                </div>
-                <button class="scroll-btn next" onclick="scrollCards( 'trending-scroll', 1)"><i class="fas fa-chevron-right"></i></button>
-            </div>
+      <div>
+        <div class="section-header reveal">
+          <h2 class="section-title">Trending Anime</h2>
+          <a href="trending.html" class="see-all"
+            >See All <i class="fas fa-chevron-right" style="font-size: 11px"></i
+          ></a>
         </div>
+        <div class="cards-scroll-wrapper reveal">
+          <button
+            class="scroll-btn prev"
+            onclick="scrollCards('trending-scroll', -1)"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="cards-scroll" id="trending-scroll">
+            <div class="anime-card">
+              <img
+                src="https://www.themarysue.com/wp-content/uploads/2023/12/One-Piece-anime.jpg?w=1200 "
+                alt="One Piece "
+              />
+              <div class="trending-num-1" style="font-size: 70">01</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">One Piece</div>
+                <div class="anime-card-meta">Anime · 1000+ Eps</div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img
+                src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png"
+                alt="Jujutsu Kaisen "
+              />
+              <div class="anime-card-badge sub">SUB</div>
+              <div class="trending-num">02</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">Jujutsu Kaisen</div>
+                <div class="anime-card-meta">Anime · 2 Seasons</div>
+              </div>
+            </div>
+            <div class="anime-card">
+              <img
+                src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png"
+                alt="Jujutsu Kaisen "
+              />
+              <div class="anime-card-badge sub">SUB</div>
+              <div class="trending-num">02</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">Jujutsu Kaisen</div>
+                <div class="anime-card-meta">Anime · 2 Seasons</div>
+              </div>
+            </div>
+            <div class="anime-card">
+              <img
+                src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png"
+                alt="Jujutsu Kaisen "
+              />
+              <div class="anime-card-badge sub">SUB</div>
+              <div class="trending-num">02</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">Jujutsu Kaisen</div>
+                <div class="anime-card-meta">Anime · 2 Seasons</div>
+              </div>
+            </div>
+            <div class="anime-card">
+              <img
+                src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png"
+                alt="Jujutsu Kaisen "
+              />
+              <div class="anime-card-badge sub">SUB</div>
+              <div class="trending-num">02</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">Jujutsu Kaisen</div>
+                <div class="anime-card-meta">Anime · 2 Seasons</div>
+              </div>
+            </div>
+            <div class="anime-card">
+              <img
+                src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png"
+                alt="Jujutsu Kaisen "
+              />
+              <div class="anime-card-badge sub">SUB</div>
+              <div class="trending-num">02</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">Jujutsu Kaisen</div>
+                <div class="anime-card-meta">Anime · 2 Seasons</div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="scroll-btn next"
+            onclick="scrollCards('trending-scroll', 1)"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Anime -->
+    <section class="new-anime">
+      <div>
+        <div class="section-header reveal">
+          <h2 class="section-title">New Anime</h2>
+          <a href="new.html" class="see-all"
+            >See All <i class="fas fa-chevron-right" style="font-size: 11px"></i
+          ></a>
+        </div>
+        <div class="cards-scroll-wrapper reveal">
+          <button
+            class="scroll-btn prev"
+            onclick="scrollCards('new-scroll', -1)"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="cards-scroll" id="new-scroll">
+            <div class="anime-card">
+              <img
+                src="https://www.themarysue.com/wp-content/uploads/2023/12/One-Piece-anime.jpg?w=1200 "
+                alt="One Piece "
+              />
+              <div class="trending-num-1" style="font-size: 70">01</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">One Piece</div>
+                <div class="anime-card-meta">Anime · 1000+ Eps</div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img
+                src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png"
+                alt="Jujutsu Kaisen "
+              />
+              <div class="anime-card-badge sub">SUB</div>
+              <div class="trending-num">02</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">Jujutsu Kaisen</div>
+                <div class="anime-card-meta">Anime · 2 Seasons</div>
+              </div>
+            </div>
+            <div class="anime-card">
+              <img
+                src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png"
+                alt="Jujutsu Kaisen "
+              />
+              <div class="anime-card-badge sub">SUB</div>
+              <div class="trending-num">02</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">Jujutsu Kaisen</div>
+                <div class="anime-card-meta">Anime · 2 Seasons</div>
+              </div>
+            </div>
+            <div class="anime-card">
+              <img
+                src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png"
+                alt="Jujutsu Kaisen "
+              />
+              <div class="anime-card-badge sub">SUB</div>
+              <div class="trending-num">02</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">Jujutsu Kaisen</div>
+                <div class="anime-card-meta">Anime · 2 Seasons</div>
+              </div>
+            </div>
+            <div class="anime-card">
+              <img
+                src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png"
+                alt="Jujutsu Kaisen "
+              />
+              <div class="anime-card-badge sub">SUB</div>
+              <div class="trending-num">02</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">Jujutsu Kaisen</div>
+                <div class="anime-card-meta">Anime · 2 Seasons</div>
+              </div>
+            </div>
+            <div class="anime-card">
+              <img
+                src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png"
+                alt="Jujutsu Kaisen "
+              />
+              <div class="anime-card-badge sub">SUB</div>
+              <div class="trending-num">02</div>
+              <div class="card-hover-overlay">
+                <div class="play-icon-big"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="anime-card-info">
+                <div class="anime-card-title">Jujutsu Kaisen</div>
+                <div class="anime-card-meta">Anime · 2 Seasons</div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="scroll-btn next"
+            onclick="scrollCards('new-scroll', 1)"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED BANNER -->
+    <section>
+      <div class="featured-banner reveal">
+        <img src="https://4kwallpapers.com/images/walls/thumbs_3t/22929.jpg"/>
+      </div>
+      <a href="#"></a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">KibiNime</a>
-                <p>KibiNime is your go-to platform for a world of entertainment, offering a vast library of anime, films, TV shows, and exclusive content.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>f
-                    <li><a href="#">Investors</a></li>
-                    <li><a href="#">Press</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Help &amp; Support</h4>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Account &amp; Billing</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookie Preferences</a></li>
-                    <li><a href="#">Accessibility</a></li>
-                </ul>
-            </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">KibiNime</a>
+          <p>
+            KibiNime is your go-to platform for a world of entertainment,
+            offering a vast library of anime, films, TV shows, and exclusive
+            content.
+          </p>
         </div>
-        <div class="footer-bottom">
-            <p>Copyright © 2026 KibiNime. All rights reserved.</p>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            f
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
         </div>
+        <div class="footer-col">
+          <h4>Help &amp; Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Account &amp; Billing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright © 2026 KibiNime. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-</body>
-
+  </body>
 </html>

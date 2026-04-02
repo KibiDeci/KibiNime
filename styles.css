@@ -110,6 +110,30 @@ a {
   color: var(--text);
 }
 
+.login-button {
+  display: flex;
+  justify-content: center;
+}
+
+.login-button button:hover {
+  color: #8ab82e;
+}
+
+.login-button button {
+  width: 100%;
+  padding: 13px 0;
+  background: transparent;
+  border: 0px;
+  border-radius: 5px;
+  color: #f0ece4;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  padding: 8px;
+}
+
 .btn-login {
   background: transparent;
   border: 1.5px solid var(--border);
@@ -417,7 +441,8 @@ a {
 /* ── SECTIONS ── */
 
 section {
-  padding: 60px 0;
+  padding: 20px 0;
+  background-color: var(--bg-card);
 }
 
 .section-header {
@@ -449,11 +474,11 @@ section {
 /* ── FEATURED BANNER ── */
 
 .featured-banner {
-  margin: 0 60px 50px;
+  margin: 0 200px;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  height: 220px;
+  height: 200px;
   cursor: pointer;
 }
 
@@ -471,106 +496,12 @@ section {
 .featured-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(10, 10, 15, 0.9) 0%,
-    rgba(10, 10, 15, 0.3) 100%
-  );
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 30px;
 }
 
-.featured-banner-title {
-  font-family: var(--font-display);
-  font-size: 36px;
-  letter-spacing: 1px;
-  margin-bottom: 6px;
-}
-
-.banner-ratings {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 10px;
-}
-
-.imdb-badge {
-  background: #f5c518;
-  color: #000;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 2px 6px;
-  border-radius: 3px;
-}
-
-.rt-badge {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: var(--accent2);
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.banner-desc {
-  font-family: var(--font-text);
-  font-size: 13px;
-  color: var(--text-muted);
-  max-width: 340px;
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.banner-actions {
-  display: flex;
-  gap: 10px;
-}
-
-.btn-sm-watch {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--accent);
-  color: #0a0a0f;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 6px;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-decoration: none;
-}
-
-.btn-sm-watch:hover {
-  background: #cdf54e;
-  color: #0a0a0f;
-}
-
-.btn-sm-trailer {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 6px;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-decoration: none;
-}
-
-.btn-sm-trailer:hover {
-  background: rgba(255, 255, 255, 0.18);
-  color: #fff;
-}
 
 /* ── ANIME CARD CAROUSEL ── */
 
@@ -746,6 +677,12 @@ section {
   line-height: 1;
   color: var(--accent-dim);
   -webkit-text-stroke: 1px rgba(0, 0, 0, 1);
+}
+
+/* NEW ANIME */
+.new-anime {
+  background: var(--bg-card);
+  /* background-image: linear-gradient(to bottom, var(--bg-dark), var(--bg-card)); */
 }
 
 /* ── SUBSCRIPTION ── */
