@@ -166,6 +166,7 @@ a {
 /* ── Hero Section ── */
 .login-section{
   background: var(--bg-card);
+  padding: 60px;
 }
 
 .login-section-tittle h1{
@@ -275,4 +276,47 @@ a {
   transition: color 0.2s;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.forgot-register a:hover{
+  text-decoration: none;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  transition: color 0.2s;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ── Footer ── */
+
+.footer-login {
+  text-align: center;
+  margin-bottom: 10px;
+  background: var(--bg-card);
+  color: var(--text-muted);
+}
+
+.footer-login a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  padding: 20px;
+}
+
+.footer-login span {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  padding: 20px;
+}
+
+.footer-login a:hover {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  padding: 20px;
 }
