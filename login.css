@@ -86,8 +86,8 @@ a {
 }
 
 .nav-links a:hover,
-.nav-links a.active {
-  color: var(--text);
+.nav-links a .active {
+  color: var(--accent-dim);
 }
 
 .logo-login {
@@ -121,7 +121,7 @@ a {
 }
 
 .nav-icon:hover {
-  color: var(--text);
+  color: var(--accent-dim);
 }
 
 .nav-links-login {
@@ -144,7 +144,7 @@ a {
 
 .nav-links-login a:hover,
 .nav-links-login a.active {
-  color: var(--text);
+  color: var(--accent-dim);
 }
 
 .hamburger {
@@ -239,7 +239,6 @@ a {
   display: flex;
   justify-content: center;
   border-radius: 50px
-  
 }
 
 .login-button1:hover {
@@ -280,7 +279,7 @@ a {
 
 .forgot-register a:hover{
   text-decoration: none;
-  color: white;
+  color: var(--accent-dim);
   font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   transition: color 0.2s;
@@ -314,7 +313,7 @@ a {
 }
 
 .footer-login a:hover {
-  color: white;
+  color: var(--accent-dim);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s;

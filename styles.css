@@ -80,7 +80,7 @@ a {
 }
 
 .nav-links a:hover{
-  color: var(--text);
+  color: var(--accent-dim);
 }
 
 .logo {
